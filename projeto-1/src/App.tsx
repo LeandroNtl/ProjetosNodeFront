@@ -241,7 +241,7 @@ const App = () => {
                 {/* Modal Novo Projetor */}
                 <div className="modal fade" id="modalNovoProjetor" tabIndex={-1} aria-labelledby="modalNovoProjetorLabel" aria-hidden="true">
                     <div className="modal-dialog">
-                        <div className="modal-content">
+                        <form className="modal-content" onSubmit={() => create()}>
                             <div className="modal-header bg-primary text-white">
                                 <h5 className="modal-title" id="modalNovoProjetorLabel">Novo Projetor</h5>
                                 <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -273,16 +273,16 @@ const App = () => {
                                 </div>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => create()}>Salvar</button>
+                                <button type="submit" className="btn btn-primary">Salvar</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
                 {/* Modal Editar Projetor */}
                 <div className="modal fade" id="modalEditarProjetor" tabIndex={-1} aria-labelledby="modalEditarProjetorLabel" aria-hidden="true">
                     <div className="modal-dialog">
-                        <div className="modal-content">
+                        <form className="modal-content" onSubmit={() => update()}>
                             <div className="modal-header bg-primary text-white">
                                 <h5 className="modal-title" id="modalEditarProjetorLabel">Editar Projetor</h5>
                                 <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -315,9 +315,9 @@ const App = () => {
                                 </div>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => update()}>Salvar</button>
+                                <button type="button" className="btn btn-primary">Salvar</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
                     
